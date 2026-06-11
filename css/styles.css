@@ -1,0 +1,52 @@
+
+/* Import de la police inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Reset global pour toute les pages liées  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Stylisation général du header  */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(40, 40, 92);
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: rgb(253, 11, 160);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: grey;
+    color: black;
+    padding: 20px;
+    text-align: center;
+
+}
