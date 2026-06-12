@@ -76,7 +76,7 @@ footer {
     margin: 20px;
 }
 
-.home-main .hero .hero-button {
+.home-main .hero .hero-btn {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -85,25 +85,25 @@ footer {
     
 }
 
-.home-main .hero .hero-button a {
+.home-main .hero .hero-btn a {
     text-decoration: none;
 }
 
-.home-main .hero .hero-button .login-btn {
+.home-main .hero .hero-btn .login-btn {
     background-color: #2563EB;
     color: white;
     padding: 12px;
     border-radius: 8px;
 }
 
-.home-main .hero .hero-button .register-btn {
+.home-main .hero .hero-btn .register-btn {
     background-color: #1E3A8A;
     color: white;
     padding: 12px;
     border-radius: 8px;
 }
 
-.home-main .hero .hero-button a:hover {
+.home-main .hero .hero-btn a:hover {
     opacity: 0.8;
     font-weight: bold;
 }
