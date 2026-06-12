@@ -23,7 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgb(40, 40, 92);
+    background-color: #1E3A8A;
     color: white;
 }
 
@@ -49,14 +49,61 @@ header nav ul li a {
     text-decoration: none;
 }
 
+header nav ul li a:hover {
+    color: #2563EB;
+}
 
 main {
     flex: 1;
 }
+
 footer {
     background-color: grey;
     color: black;
     padding: 10px;
     text-align: center;
 
+}
+
+/* PAGE D'ACCUEIL */
+
+.home {
+    background-color: whitesmoke;
+}
+
+.home-main .hero .hero-content {
+    text-align: center;
+    margin: 20px;
+}
+
+.home-main .hero .hero-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.home-main .hero .hero-button a {
+    text-decoration: none;
+}
+
+.home-main .hero .hero-button .login-btn {
+    background-color: #2563EB;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.home-main .hero .hero-button .register-btn {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.home-main .hero .hero-button a:hover {
+    opacity: 0.8;
+    font-weight: bold;
 }
