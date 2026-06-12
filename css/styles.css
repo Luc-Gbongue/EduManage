@@ -107,3 +107,61 @@ footer {
     opacity: 0.8;
     font-weight: bold;
 }
+
+/* PAGE LOGIN  */
+
+.login-main {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(17, 17, 17);
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+form { 
+    text-align: left;
+}
+
+.input-box {
+    margin-bottom: 10px;
+    display: block;   
+}
+
+.input-box #email {
+    margin-left: 62px;
+    outline: none;
+    padding: 8px;
+    border-radius: 3px;
+    border: solid 0.8px;
+}
+
+.input-box #password {
+     outline: none;
+    padding: 8px;
+    border-radius: 3px;
+    border: solid 0.8px;
+}
+
+.login-container .login-btn {
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-container .login-btn:hover {
+   font-weight: bold;
+}
