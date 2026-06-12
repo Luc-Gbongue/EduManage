@@ -139,7 +139,7 @@ form {
     display: block;   
 }
 
-.input-box #email {
+.login-main .input-box #email {
     margin-left: 62px;
     outline: none;
     padding: 8px;
@@ -147,7 +147,7 @@ form {
     border: solid 0.8px;
 }
 
-.input-box #password {
+.login-main .input-box #password {
      outline: none;
     padding: 8px;
     border-radius: 3px;
