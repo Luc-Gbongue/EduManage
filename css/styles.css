@@ -10,7 +10,13 @@
     font-family: "Inter", sans-serif;
 }
 
-/* Stylisation général du header  */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Stylisation général du header pout toutes les pages  */
 
 header {
     display: flex;
@@ -21,16 +27,16 @@ header {
     color: white;
 }
 
-.logo {
+header .logo {
     font-size: 20px;
     font-weight: bold;
 }
 
-.logo span {
+header .logo span {
     color: rgb(253, 11, 160);
 }
 
-ul {
+header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -38,15 +44,19 @@ ul {
     gap: 20px;
 }
 
-a{
+header nav ul li a {
     color: white;
     text-decoration: none;
 }
 
+
+main {
+    flex: 1;
+}
 footer {
     background-color: grey;
     color: black;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 
 }
