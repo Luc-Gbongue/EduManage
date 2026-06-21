@@ -252,10 +252,27 @@ form {
 }
 
 .dashboard-box {
-    background-color: ;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
 }
 
 .dashboard-box h2 {
     color: #1E3A8A;
     margin-bottom: 10px;
+}
+
+.add-btn{
+    background-color: #2563EB;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.add-btn:hover{
+    font-weight: bold;
 }
