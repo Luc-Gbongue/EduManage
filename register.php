@@ -15,8 +15,8 @@
             <!-- barre de navigation/lien  -->
             <nav>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="login.html">Se connecter</a></li>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="login.php">Se connecter</a></li>
                 </ul>
             </nav>
         </header>
@@ -52,7 +52,6 @@
                                 <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmez votre mot de passe" required>
                             </div>
                             <button type="submit" class="register-btn">Envoyez</button>
-                            <a href="login.html">J'ai déjà un compte</a>
                         </form>
                     </div>
                 </div>

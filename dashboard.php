@@ -14,10 +14,10 @@
          <!-- barre de navigation/lien  -->
         <nav>
             <ul>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="students.html">Elèves</a></li>
-                <li><a href="grades.html">Notes</a></li>
-                <li><a href="logout.html">Déconnexion</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="students.php">Elèves</a></li>
+                <li><a href="grades.php">Notes</a></li>
+                <li><a href="logout.php">Déconnexion</a></li>
             </ul>
         </nav>
     </header>
@@ -31,12 +31,12 @@
                 <div class="dashboard-box">
                     <h2>Gestion des élèves</h2>
                     <img src="images/Gestion_élèves.png" alt="eleves">
-                    <a href="students.html" class="action-btn">Ajouter un élève</a>
+                    <a href="students.php" class="action-btn">Ajouter un élève</a>
                 </div>
                 <div class="dashboard-box">
                     <h2>Gestion des notes</h2>
                     <img src="images/Gestion_notes.jpg" alt="notes">
-                    <a href="grades.html" class="action-btn">Ajouter une note</a>
+                    <a href="grades.php" class="action-btn">Ajouter une note</a>
                 </div>
             </section>
         </section>
