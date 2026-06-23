@@ -282,7 +282,7 @@ form {
 
 /* PAGES STUDENTS  */
 
-.eleves section {
+.students section {
      display: flex;
     justify-content: center;
     align-items: center;
@@ -293,11 +293,11 @@ form {
     justify-content: center;
     align-items: center;
 }
-.eleves .addform-container{
+.students .addform-container{
     margin: 20px;
 }
 
-.eleves .addform-container h1{
+.students .addform-container h1{
     color: #1E3A8A;
     margin-bottom: 10px;
 }
