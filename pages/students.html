@@ -22,11 +22,49 @@
         </div>
     </header>
     <main>
-        <div class="input">
-            <h1>Gestion des élèves</h1>
-            <input type="text" id="input-eleve" name="input-eleve" placeholder="Ajouter un élève">
-            <button class="add-btn">Ajouter</button>
-        </div>
+        <!-- section reservée à l'enregistrement de l'élève  -->
+        <section class="add-student">
+            <div class="addform-container">
+                <h1>Ajouter un élève</h1>
+                <form action="#" method="POST">
+                    <div class="input-box">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Entrez le nom" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Entrez le prénom" required>
+                    </div>
+                    <div class="classe">
+                        <label for="classe">Classe</label>
+                        <input type="text" name="classe" id="classe" placeholder="Ex : 6ème 1" required>
+                    </div>
+                    <button class="add-btn">Ajouter l'élève</button>
+                </form>
+            </div>
+        </section>
+        <section class="table-section">
+            <h2>Listes des élèves</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Classe</th>
+                            <th>Modifier</th>
+                            <th>Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6">Aucun élève enregiistré pour le moment</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
     <footer>
          <p>&copy; 2026 EduManage - Tous droits reservés. </p>

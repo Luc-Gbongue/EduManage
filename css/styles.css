@@ -265,7 +265,7 @@ form {
     margin-bottom: 10px;
 }
 
-.add-btn{
+.action-btn{
     background-color: #2563EB;
     color: white;
     padding: 10px;
@@ -273,6 +273,6 @@ form {
     border-radius: 10px;
 }
 
-.add-btn:hover{
+.action-btn:hover{
     font-weight: bold;
 }
