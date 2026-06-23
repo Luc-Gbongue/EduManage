@@ -306,8 +306,9 @@ form {
     margin-bottom: 15px;
 }
 
-.input-box label{
-    display: block;margin-bottom: 5px;
+.students .input-box label{
+    display: block;
+    margin-bottom: 5px;
 }
 
 .input-box input{
@@ -323,7 +324,6 @@ form {
     border-radius: 20px;
     color: white;
     padding: 10px;
-
     background-color: #2563EB;
 }
 
@@ -342,21 +342,64 @@ form {
     margin-bottom: 10px;
 }
 
-.table-container table{
+ table{
     width: 100%;
     border-collapse: collapse;
     background-color: white;
+     border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
 }
 
-.table-container table th{
+table th{
     background-color: #1E3A8A;
     color: white;
     padding: 10px;
     text-align: center;
 }
 
-.table-container table{
-    boredr: 1px solid #dddddd;
-    text-align: center;
-    padding: 10px;
+
+/* PAGE GRADE  */
+
+.grades main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.grades .grade-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grades .grade-container{
+    display: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.grades .grade-container h1{
+    margin-bottom: 10px;
+}
+
+.grade-container select{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    text-align: center;
+}
+
+.grade-container input {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.grades .add-btn{
+    margin-top: 10px;
+}
+
