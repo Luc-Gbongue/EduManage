@@ -1,3 +1,25 @@
+<?php
+
+// Demarrer une session de connexion utilisteur
+session_start();
+// connexion a la base de données
+include("includes/db.php");
+
+// si formulaire de connexion envoyé 
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+// recuprer les données envoyées 
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+// verification 1: les champs vides 
+if($email == "" || $password == ""){
+    echo "Veuillez remplir les champs vides.";
+}
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -31,7 +53,7 @@
                     </div>
                 <!-- Formulaire de connexion  -->
                     <div>
-                    <form action="#" method="POST">
+                    <form action="#" method="POST" novalidate>
                         <div class="input-box">
                             <label for="email">Email : </label>
                              <input type="email" name="email" id="email" placeholder="Entrez votre adresse mail" required>

@@ -3,7 +3,7 @@
 include("includes/db.php");
 
 // // Si le formulaire est envoyé au serveur avec la method="POST"
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+if($_SERVER["REQUEST_METHOD"] == "POST") { 
     // recuperer les données du formulaire
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom']; 
@@ -14,6 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // verification 1 : les champs de saisie vides
     if($nom == "" || $prenom == "" || $email == "" || $password =="") {
         echo "Veuillez remplir tous les champs.";
+    }
     else{
          // verification 2: si l'email existe deja dans la base
     // else {
