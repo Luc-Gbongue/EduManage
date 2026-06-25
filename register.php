@@ -14,24 +14,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // verification 1 : les champs de saisie vides
     if($nom == "" || $prenom == "" || $email == "" || $password =="") {
         echo "Veuillez remplir tous les champs.";
-    }
     else{
          // verification 2: si l'email existe deja dans la base
     // else {
         // etablie une requete sql 
-        $sqlrequete = "SELECT * FROM users WHERE email = '$email'";
+        $sql_email = "SELECT * FROM users WHERE email = '$email'";
 
         // boite contenant le resultat de la requete 
-        $resultat = mysqli_query($connexion, $sqlrequete);
+        $resultat_email = mysqli_query($connexion, $sql_email);
 
         // si l'email exitse dans la table deja
-        if(mysqli_num_rows($resultat) > 0){
+        if(mysqli_num_rows($resultat_email) > 0){
             echo "Cet email existe déjà."; 
-         }
-         else{
-            echo "Inscription reussie!";
-            die();
-         }
+        }
+        else{
+            // inserer dans la ta ble users  les valeurs des variables
+            $sql_insertion = "INSERT INTO users(nom, prenom, email, password)
+            VALUES('$nom', '$prenom', '$email', '$password')";
+
+            // boite resultat d'exécution de l'instruction 
+            $resultat_insertion = mysqli_query($connexion, $sql_insertion);
+
+            if($resultat_insertion){
+                echo "Formulaire envoyé avec succès.";
+                header("Location: login.php");
+                exit();
+            }
+        }
+         
     }
 
 }
