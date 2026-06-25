@@ -14,9 +14,9 @@
          <!-- barre de navigation/lien  -->
         <nav>
             <ul>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="students.html">Elèves</a></li>
-                <li><a href="logout.html">Déconnexion</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="students.php">Elèves</a></li>
+                <li><a href="logout.php">Déconnexion</a></li>
             </ul>
         </nav>
         </div>
@@ -54,7 +54,7 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nom et prénom</th>
+                        <th>Elève</th>
                         <th>Matière</th>
                         <th>Note</th>
                         <th>Modifier</th>

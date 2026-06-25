@@ -1,3 +1,42 @@
+<?php
+// connecter la base au formulaire 
+include("includes/db.php");
+
+// // Si le formulaire est envoyé au serveur avec la method="POST"
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    // recuperer les données du formulaire
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom']; 
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // verification des données recuperees
+    // verification 1 : les champs de saisie vides
+    if($nom == "" || $prenom == "" || $email == "" || $password =="") {
+        echo "Veuillez remplir tous les champs.";
+    }
+    else{
+         // verification 2: si l'email existe deja dans la base
+    // else {
+        // etablie une requete sql 
+        $sqlrequete = "SELECT * FROM users WHERE email = '$email'";
+
+        // boite contenant le resultat de la requete 
+        $resultat = mysqli_query($connexion, $sqlrequete);
+
+        // si l'email exitse dans la table deja
+        if(mysqli_num_rows($resultat) > 0){
+            echo "Cet email existe déjà."; 
+         }
+         else{
+            echo "Inscription reussie!";
+            die();
+         }
+    }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -30,7 +69,7 @@
                         <p>Inscrivez-vous pour avoir votre espace de travail sur EduManage</p>
                     </div>
                     <div>
-                        <form action="#" method="POST">
+                        <form action="#" method="POST" novalidate>
                             <div class="input-box">
                                 <label for="nom">Nom : </label>
                                 <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" required>
@@ -46,10 +85,6 @@
                             <div class="input-box">
                                 <label for="password">Mot de passe</label>
                                 <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe" required>
-                            </div>
-                            <div class="input-box">
-                                <label for="confirm-password">Confirmer le mot de passe</label>
-                                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmez votre mot de passe" required>
                             </div>
                             <button type="submit" class="register-btn">Envoyez</button>
                         </form>
