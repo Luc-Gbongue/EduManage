@@ -18,13 +18,13 @@ if($email == "" || $password == ""){
 }
 else{
     // si non, trouver l'utilisateur corresondant à cet email 
-    $sql_requete = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+    $sql_requete = "SELECT * FROM users WHERE email = '$email' AND password = '$password' ";
     $resultat_requete = mysqli_query($connexion, $sql_requete);
 
     // si le resultat donne une seule ligne de mail 
     if (mysqli_num_rows($resultat_requete) == 1){
         // ouvrir la session de connexion basée sur l'email de l'utilisateur 
-        $_SESSION['user_email'] = $email;
+        $_SESSION['user'] = $email;
 
         // et le rediriger vers dashboard 
         header("Location: dashboard.php");

@@ -1,3 +1,23 @@
+<?php
+// Demarrer la session 
+session_start();
+
+// si aucun utilisateur n'esy connecté 
+if(!isset($_SESSION["user"])) {
+    header("Location: login.php");
+    exit();
+}
+
+// connexion à la db 
+include("../includes/db.php");
+
+// si formulaire ajouter  avec methode POST 
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // recupérer les données u formulaire 
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +46,7 @@
         <section class="add-student">
             <div class="addform-container">
                 <h1>Ajouter un élève</h1>
-                <form action="#" method="POST">
+                <form action="#" method="POST" novalidate>
                     <div class="input-box">
                         <label for="nom">Nom</label>
                         <input type="text" id="nom" name="nom" placeholder="Entrez le nom" required>
