@@ -5,7 +5,7 @@ session_start();
 // connexion a la base de données
 include("includes/db.php");
 
-// si formulaire de connexion envoyé 
+// si formulaire de connexion envoyé avec la methode "POST"
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 // recuprer les données envoyées 
@@ -15,6 +15,24 @@ $password = $_POST['password'];
 // verification 1: les champs vides 
 if($email == "" || $password == ""){
     echo "Veuillez remplir les champs vides.";
+}
+else{
+    // si non, trouver l'utilisateur corresondant à cet email 
+    $sql_requete = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+    $resultat_requete = mysqli_query($connexion, $sql_requete);
+
+    // si le resultat donne une seule ligne de mail 
+    if (mysqli_num_rows($resultat_requete) == 1){
+        // ouvrir la session de connexion basée sur l'email de l'utilisateur 
+        $_SESSION['user_email'] = $email;
+
+        // et le rediriger vers dashboard 
+        header("Location: dashboard.php");
+        exit();
+    }
+    else{
+        echo "Email ou mot de passe incorrect";
+    }
 }
 }
 
