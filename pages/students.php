@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="grades.php">Notes</a></li>
-                <li><a href="logout.php">Déconnexion</a></li>
+                <li><a href="../logout.php">Déconnexion</a></li>
             </ul>
         </nav>
         </div>
