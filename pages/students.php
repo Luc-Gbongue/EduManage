@@ -22,14 +22,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // verification des champs vides 
     if($nom == "" || $prenom == "" || $classe == ""){
         echo "Veuillez remplir tous les champs.";
-    }
+    } else {
+
     // inserer/Created l'éleve dans la tables students de la base sql
-    $sql = "INSERT INTO students_db(nom, prenom, classe) VALUES('$nom', '$prenom', '$classe')";
-    $resultat = mysqli_query($connexion, $sql);
+    $sql_create = "INSERT INTO students_db(nom, prenom, classe) VALUES('$nom', '$prenom', '$classe')";
+    $resultat_create = mysqli_query($connexion, $sql_create);
     echo "eleve ajouté avec succès.";
-    exit();     
+    header("Location: students.php");
+    exit(); 
+     }    
 }
 
+// afficher/Read automatiquement l'éleve ajouté dans le tableau
+$sql_read = "SELECT * FROM students_db";
+$resultat_read = mysqli_query($connexion, $sql_read);
+$nombre_eleve = mysqli_num_rows($resultat_read);
 
 ?>
 <!DOCTYPE html>
@@ -92,9 +99,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         </tr>
                     </thead>
                     <tbody>
+                        <?php if($nombre_eleve > 0) {
+                            while($eleve = mysqli_fetch_assoc($resultat_read)){?>
+                                <tr>
+                                <td><?php echo $eleve['id']; ?></td>
+                                <td><?php echo $eleve['nom']; ?></td>
+                                <td><?php echo $eleve['prenom']; ?></td>
+                                <td><?php echo $eleve['classe']; ?></td>
+                                <td></td>
+                                <td></td>
+                                </tr>
+                                <?php
+                            }
+                        } else { ?>
+                        
                         <tr>
-                            <td colspan="6">Aucun élève enregiistré pour le moment</td>
+                            <td colspan="6">Aucun élève enregistré pour le moment</td>
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
