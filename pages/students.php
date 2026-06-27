@@ -15,8 +15,22 @@ include("../includes/db.php");
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // recupérer les données u formulaire 
-    
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $classe = $_POST['classe'];
+
+    // verification des champs vides 
+    if($nom == "" || $prenom == "" || $classe == ""){
+        echo "Veuillez remplir tous les champs.";
+    }
+    // inserer/Created l'éleve dans la tables students de la base sql
+    $sql = "INSERT INTO students_db(nom, prenom, classe) VALUES('$nom', '$prenom', '$classe')";
+    $resultat = mysqli_query($connexion, $sql);
+    echo "eleve ajouté avec succès.";
+    exit();     
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
          <!-- barre de navigation/lien  -->
         <nav>
             <ul>
-                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="../dashboard.php">Dashboard</a></li>
                 <li><a href="grades.php">Notes</a></li>
                 <li><a href="../logout.php">Déconnexion</a></li>
             </ul>
