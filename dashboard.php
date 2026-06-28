@@ -5,7 +5,7 @@ session_start();
 // si aucun utilisateur n'est connecté 
 if(!isset($_SESSION['user'])) {
     // rediriger vers le login
-    header("Location: login.php");
+    header("Location: index.php");
     // et arreter le script
     exit();
 

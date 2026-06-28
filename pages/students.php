@@ -4,7 +4,7 @@ session_start();
 
 // si aucun utilisateur n'esy connecté 
 if(!isset($_SESSION["user"])) {
-    header("Location: login.php");
+    header("Location: ../index.php");
     exit();
 }
 

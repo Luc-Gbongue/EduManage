@@ -15,9 +15,9 @@
             <!-- barre de navigation/lien  -->
             <nav>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="login.html">Connexion</a></li>
-                    <li><a href="register.html">Inscription</a></li>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="login.php">Connexion</a></li>
+                    <li><a href="register.php">Inscription</a></li>
                 </ul>
             </nav>
         </header>
@@ -32,8 +32,8 @@
                 
                 <!-- button de connexion  -->
                     <div class="hero-btn">
-                        <a href="login.html" class="login-btn">Se connecter</a>
-                        <a href="register.html" class="register-btn">Créer un compte</a>
+                        <a href="login.php" class="login-btn">Se connecter</a>
+                        <a href="register.php" class="register-btn">Créer un compte</a>
                     </div>
                 </div>
             </section>
