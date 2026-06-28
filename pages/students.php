@@ -106,8 +106,8 @@ $nombre_eleve = mysqli_num_rows($resultat_read);
                                 <td><?php echo $eleve['nom']; ?></td>
                                 <td><?php echo $eleve['prenom']; ?></td>
                                 <td><?php echo $eleve['classe']; ?></td>
-                                <td></td>
-                                <td></td>
+                                <td><a href="#">Modifier</a></td>
+                                <td><a href="#">Supprimer</a></td>
                                 </tr>
                                 <?php
                             }
