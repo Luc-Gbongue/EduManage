@@ -6,6 +6,7 @@ if(!isset($_SESSION['user'])){
     header("Location: ../login.php");
     exit();
 } else{
+    if(isset($_GET['id']))
     // recuperer l'id de l'eleve
      $student_id = $_GET['id'];
 

@@ -40,7 +40,7 @@ $nombre_eleve = mysqli_num_rows($resultat_read);
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,12 +102,12 @@ $nombre_eleve = mysqli_num_rows($resultat_read);
                         <?php if($nombre_eleve > 0) {
                             while($eleve = mysqli_fetch_assoc($resultat_read)){?>
                                 <tr>
-                                <td><?php echo $eleve['id']; ?></td>
-                                <td><?php echo $eleve['nom']; ?></td>
-                                <td><?php echo $eleve['prenom']; ?></td>
-                                <td><?php echo $eleve['classe']; ?></td>
-                                <td><a href="#">Modifier</a></td>
-                                <td><a href="delete.php?id=<?php echo $eleve['id'];?>">Supprimer</a></td>
+                                    <td><?php echo $eleve['id']; ?></td>
+                                    <td><?php echo $eleve['nom']; ?></td>
+                                    <td><?php echo $eleve['prenom']; ?></td>
+                                    <td><?php echo $eleve['classe']; ?></td>
+                                    <td><a href="edit.php?id=<?php echo $eleve['id']; ?>">Modifier</a></td>
+                                    <td><a href="delete.php?id=<?php echo $eleve['id'];?>">Supprimer</a></td>
                                 </tr>
                                 <?php
                             }
