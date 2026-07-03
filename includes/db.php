@@ -10,6 +10,4 @@ if(!$connexion){
     die("La connection à la base de donnée a échoué");
 }
 
-
-mysqli_set_charset($connexion, "utf8");
 ?>

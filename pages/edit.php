@@ -28,15 +28,24 @@ if(!isset($_SESSION['user'])){
         // si  formulaire envoyé avec la methode POST
          if($_SERVER["REQUEST_METHOD"] == "POST"){
             // recuperer les données saisies
-            $name = $_POST['nom'];
+            $nom = $_POST['nom'];
             $prenom = $_POST['prenom'];
             $classe = $_POST['classe'];
 
             // verifier les champs vides 
-            if($name == "" || $prenom == "" || $classe == ""){
+            if($nom == "" || $prenom == "" || $classe == ""){
                 echo "Veuillez remplir tous les champs.";
-            } else{
-                $sql_modification = "UPDATE "
+            } 
+            // Sinon enregistrer les modifications
+            else{
+                $sql_modification = "UPDATE students_db SET nom = '$nom', prenom = '$prenom', classe = '$classe' WHERE id = '$student_id' ";
+
+                $resultat_modification = mysqli_query($connexion, $sql_modification);
+
+                if($resultat_modification) {
+                    header("Location: students.php");
+                    exit();
+                }
             }
          }
          
