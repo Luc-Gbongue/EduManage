@@ -8,10 +8,10 @@ if(!isset($_SESSION['user'])){
     header("Location: ../login.php");
     exit();
 } else {
-    // se connecter a la base de donnée 
+    //sinon, se connecter a la base de donnée 
     include("../includes/db.php");
 
-        // sinon, recuperer l'id de l'éléve 
+        // recuperer l'id de l'éléve 
          $student_id = $_GET['id'];
         // selectionner l'eleve a modifier a partir de cet id
          $sql = "SELECT * FROM students_db WHERE id = '$student_id'";
