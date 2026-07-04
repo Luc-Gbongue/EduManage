@@ -42,8 +42,9 @@ else{
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EduManage - Connexion</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body class="login">
@@ -71,7 +72,7 @@ else{
                     </div>
                 <!-- Formulaire de connexion  -->
                     <div>
-                    <form action="#" method="POST" novalidate>
+                    <form id="login-form" action="#" method="POST" novalidate>
                         <div class="input-box">
                             <label for="email">Email : </label>
                              <input type="email" name="email" id="email" placeholder="Entrez votre adresse mail" required>
@@ -79,18 +80,20 @@ else{
                         <div class="input-box">
                             <label for="password">Mot de passe : </label>
                              <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe" required>
+                             <button type="button" class="password-btn"><i class="fa-solid fa-eye"></i></button>
                         </div>
                         <button type="submit" class="login-btn">Se connecter</button>
                     </form>
                     </div>
                 </div>
             </section>
+            
         </main>
 
         <!-- Pieds de page -->
         <footer>
             <p>&copy; 2026 EduManage - Tous droits reservés. </p>
         </footer>
-        
+        <script src="js/app.js"></script>
     </body>
 </html>
