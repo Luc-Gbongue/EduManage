@@ -67,7 +67,7 @@ $nombre_eleve = mysqli_num_rows($resultat_read);
         <section class="add-student">
             <div class="addform-container">
                 <h1>Ajouter un élève</h1>
-                <form action="#" method="POST" novalidate>
+                <form id="student-form" action="#" method="POST" novalidate>
                     <div class="input-box">
                         <label for="nom">Nom</label>
                         <input type="text" id="nom" name="nom" placeholder="Entrez le nom" required>
@@ -80,7 +80,7 @@ $nombre_eleve = mysqli_num_rows($resultat_read);
                         <label for="classe">Classe</label>
                         <input type="text" name="classe" id="classe" placeholder="Ex : 6ème 1" required>
                     </div>
-                    <button class="add-btn">Ajouter la note</button>
+                    <button class="add-btn">Ajouter un élève</button>
                 </form>
             </div>
         </section>
@@ -107,7 +107,7 @@ $nombre_eleve = mysqli_num_rows($resultat_read);
                                     <td><?php echo $eleve['prenom']; ?></td>
                                     <td><?php echo $eleve['classe']; ?></td>
                                     <td><a href="edit.php?id=<?php echo $eleve['id']; ?>">Modifier</a></td>
-                                    <td><a href="delete.php?id=<?php echo $eleve['id'];?>">Supprimer</a></td>
+                                    <td><a class="btn-supprimer" href="delete.php?id=<?php echo $eleve['id'];?>">Supprimer</a></td>
                                 </tr>
                                 <?php
                             }
@@ -125,5 +125,6 @@ $nombre_eleve = mysqli_num_rows($resultat_read);
     <footer>
          <p>&copy; 2026 EduManage - Tous droits reservés. </p>
     </footer>
+    <script src="../js/app.js"></script>
 </body>
 </html>

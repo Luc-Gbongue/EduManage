@@ -32,7 +32,7 @@ if(!isset($_SESSION['user'])){
     <main>
         <div class="grade-container">
             <h1>Ajouter une note</h1>
-            <form action="#" method="POST">
+            <form id="grade-form" action="#" method="POST">
                 <div class="input-box">
                     <label for="eleve">Elève</label>
                     <select name="eleve" id="eleve">
@@ -53,7 +53,7 @@ if(!isset($_SESSION['user'])){
                     <label for="note">Note</label>
                     <input type="number" id="note" name="note" placeholder="Ex : 15">
                 </div>
-                <button class="add-btn">Ajouter la note</button>
+                <button class="add-btn">Ajouter une note</button>
             </form>
         </div>
         <div class="table">

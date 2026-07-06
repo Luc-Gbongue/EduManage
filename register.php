@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p>Inscrivez-vous pour avoir votre espace de travail sur EduManage</p>
                     </div>
                     <div>
-                        <form action="#" method="POST" novalidate>
+                        <form id="register-form" action="#" method="POST" novalidate>
                             <div class="input-box">
                                 <label for="nom">Nom : </label>
                                 <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" required>
