@@ -29,6 +29,7 @@ document.addEventListener("DomContentLoaded", function() {
         }
     }
     
+    // Appliquer à tous les lien suppriemr dns le tableau
    BoutonSupprimer.forEach(function(TousLesBoutons) {
     TousLesBoutons.addEventListener("click", SupprimerEleve);
    })
