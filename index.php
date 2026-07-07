@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>EduManage - Accueil</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="home">
+        <!-- En-tête de la page -->
+        <header>
+            <!-- logo -->
+            <div class="logo"><span>E</span>duManage</div>
+
+            <!-- barre de navigation/lien  -->
+            <nav>
+                <ul>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="login.php">Connexion</a></li>
+                    <li><a href="register.php">Inscription</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu principal -->
+        <main>
+            <!-- hero section  -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Bienvenue sur EduManage</h1>
+                    <p>Plateforme de gestion des élèves et des notes</p>
+                
+                <!-- button de connexion  -->
+                    <div class="hero-btn">
+                        <a href="login.php" class="login-btn">Se connecter</a>
+                        <a href="register.php" class="register-btn">Créer un compte</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pieds de page -->
+        <footer>
+            <p>&copy; 2026 EduManage - Tous droits reservés. </p>
+        </footer>
+        
+    </body>
+</html>
